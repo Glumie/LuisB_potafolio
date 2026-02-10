@@ -1,0 +1,250 @@
+.headerContenedor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--zHeader);
+  background-color: transparent;
+  transition: all var(--transicionNormal);
+  padding: 0;
+}
+
+/* Estado con fondo (scroll o menú abierto) */
+.headerContenedor.vidrioEfecto,
+.headerContenedor.menuAbierto {
+  background-color: rgba(13, 17, 23, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--borde);
+}
+
+.headerContenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Permite que el menú caiga debajo */
+  gap: var(--espacioMD); /* Reducido gap general */
+  padding: var(--espacioSM) var(--espacioLG);
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 80px;
+}
+
+/* Logo */
+.headerLogo {
+  display: flex;
+  align-items: center;
+  gap: var(--espacioSM);
+  cursor: pointer;
+}
+
+.headerLogoImg {
+  height: 42px;
+  width: 42px;
+  border-radius: var(--radioMD);
+  object-fit: cover;
+  transition: filter var(--transicionNormal);
+}
+
+.headerLogo:hover .headerLogoImg {
+  filter: drop-shadow(0 0 8px var(--acentoPrimario));
+}
+
+/* Navegación Desktop */
+.headerNav {
+  display: flex;
+  align-items: center;
+  gap: var(--espacioXL);
+}
+
+.headerNavEnlace {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--textoSecundario);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: var(--espacioSM) 0;
+  position: relative;
+  transition: color var(--transicionNormal);
+  cursor: pointer;
+}
+
+.headerNavEnlace::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--acentoPrimario);
+  transition: width var(--transicionNormal);
+}
+
+.headerNavEnlace:hover {
+  color: var(--textoPrincipal);
+}
+
+.headerNavEnlace:hover::after {
+  width: 100%;
+}
+
+/* Acciones */
+.headerAcciones {
+  display: flex;
+  align-items: center;
+  gap: var(--espacioMD);
+}
+
+/* Selector de idioma */
+.selectorIdioma {
+  display: flex;
+  align-items: center;
+  gap: var(--espacioXS);
+  background-color: var(--superficie);
+  border-radius: var(--radioMD);
+  padding: var(--espacioXS);
+}
+
+.idiomaOpcion {
+  padding: var(--espacioXS) var(--espacioSM);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--textoSecundario);
+  cursor: pointer;
+  border-radius: var(--radioSM);
+  transition: all var(--transicionRapida);
+}
+
+.idiomaOpcion:hover {
+  color: var(--textoPrincipal);
+}
+
+.idiomaOpcion.idiomaActivo {
+  background-color: var(--acentoPrimario);
+  color: var(--textoPrincipal);
+}
+
+/* Botón contacto */
+.btnContactoHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--acentoPrimario);
+  border-radius: var(--radioMD);
+  transition: background-color var(--transicionNormal);
+  cursor: pointer;
+}
+
+.btnContactoHeader:hover {
+  background-color: var(--acentoHover);
+}
+
+.btnContactoIcono {
+  font-size: 1.25rem;
+  color: var(--textoPrincipal);
+}
+
+/* Hamburguesa (Móvil) */
+.btnHamburguesa {
+  display: none; /* Oculto en desktop */
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  z-index: 1001;
+  /* Asegurar que no tenga márgenes extraños */
+  margin: 0;
+}
+
+.hamburguesaLinea {
+  width: 100%;
+  height: 2px;
+  background-color: var(--textoPrincipal);
+  transition: all var(--transicionNormal);
+}
+
+.btnHamburguesa.menuAbierto .hamburguesaLinea:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.btnHamburguesa.menuAbierto .hamburguesaLinea:nth-child(2) {
+  opacity: 0;
+}
+
+.btnHamburguesa.menuAbierto .hamburguesaLinea:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Menú Móvil (Expandible) */
+.menuMovil {
+  display: flex; /* Siempre flex, controlado por height */
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  order: 999; /* Forzar al final */
+  
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  
+  transition: all 0.4s ease-in-out;
+  border-top: 1px solid transparent;
+}
+
+.menuMovil.menuMovilAbierto {
+  max-height: 500px; /* Altura suficiente */
+  opacity: 1;
+  margin-top: var(--espacioSM);
+  padding-bottom: var(--espacioLG);
+  border-top-color: rgba(255,255,255,0.05);
+}
+
+.menuMovilEnlace {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--textoPrincipal);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: var(--espacioMD) 0;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  transition: background-color var(--transicionRapida);
+  cursor: pointer;
+}
+
+.menuMovilEnlace:hover {
+  background-color: rgba(255,255,255,0.05);
+  color: var(--acentoPrimario);
+}
+
+.selectorIdiomaMovil {
+  display: flex;
+  gap: var(--espacioMD);
+  margin-top: var(--espacioMD);
+  padding: var(--espacioSM);
+  border-top: 1px solid var(--bordeSuave);
+  width: 60%;
+  justify-content: center;
+}
+
+.selectorIdiomaMovil .idiomaOpcion {
+  padding: var(--espacioSM) var(--espacioMD);
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .headerNav,
+  .headerAcciones {
+    display: none;
+  }
+
+  .btnHamburguesa {
+    display: flex; /* Solo visible en móvil */
+  }
+}

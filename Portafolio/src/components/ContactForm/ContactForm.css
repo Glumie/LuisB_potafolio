@@ -1,0 +1,79 @@
+.contactoContenedor {
+  background-color: var(--fondoPrincipal);
+}
+
+.contactoContenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espacio2XL);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contactoTitulo {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* Formulario Wrapper */
+.contactoFormWrapper {
+  width: 100%;
+  padding: var(--espacio2XL);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacioXL);
+}
+
+.contactoFormGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--espacioMD);
+}
+
+/* Campo */
+.contactoCampo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacioSM);
+}
+
+.contactoCampoFull {
+  grid-column: 1 / -1;
+}
+
+.contactoLabel {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--textoTerciario);
+}
+
+/* Botón */
+.contactoBtnWrapper {
+  width: 100%;
+}
+
+.contactoBtn {
+  width: 100%;
+  justify-content: center;
+  padding: var(--espacioMD) var(--espacioXL);
+}
+
+/* Estados del botón */
+.contactoBtnDisabled {
+  opacity: 0.7;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contactoFormWrapper {
+    padding: var(--espacioXL);
+  }
+
+  .contactoFormGrid {
+    grid-template-columns: 1fr;
+  }
+}

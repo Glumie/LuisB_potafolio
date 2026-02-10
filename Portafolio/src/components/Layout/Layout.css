@@ -1,0 +1,10 @@
+.layoutContenedor {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layoutContenido {
+  flex: 1;
+  padding-top: 80px; /* Compensar header fijo */
+}

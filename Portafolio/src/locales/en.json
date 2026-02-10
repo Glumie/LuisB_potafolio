@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "inicio": "Home",
+    "sobreMi": "About",
+    "servicios": "Services",
+    "proyectos": "Projects",
+    "contacto": "Contact"
+  },
+  "hero": {
+    "saludo": "HI, I'M",
+    "nombre": "Luis Blandon",
+    "rol": "FULL STACK DEVELOPER",
+    "rolParte1": "FULL STACK",
+    "rolParte2": "DEVELOPER",
+    "descripcion": "I'm a passionate Full Stack developer with a mission to create intuitive and functional digital experiences. Translating complex ideas into complete web solutions.",
+    "btnCV": "Download CV"
+  },
+  "about": {
+    "etiqueta": "ABOUT ME",
+    "titulo": "Academic Progress",
+    "tituloAccento": "& Contact",
+    "descripcionAcademica": "Currently pursuing my Information Technology Engineering degree with a focus on modern web technologies and software development. Maintaining a strong focus on both academic excellence and practical project development.",
+    "email": "luisblocon15@gmail.com",
+    "ubicacion": "Puntarenas, Costa Rica",
+    "estudios": "Information Technology Engineering Student"
+  },
+  "skills": {
+    "etiqueta": "Tech Stack & Skills",
+    "titulo": "Technologies"
+  },
+  "projects": {
+    "etiqueta": "PORTFOLIO",
+    "titulo": "Recent",
+    "tituloAccento": "Projects",
+    "verDetalles": "View Details",
+    "proximamente": "Coming Soon",
+    "sinImagen": "Image not available",
+    "psm": {
+      "descripcion": "Full-stack platform for event management in Puntarenas. Frontend with React 19, Tailwind CSS, Radix UI and Framer Motion. Backend with Django REST Framework, JWT authentication, MySQL, MongoDB and n8n automation."
+    },
+    "taller": {
+      "descripcion": "Auto repair shop management system with authentication, QR ticket generator, appointment and service history, admin panel and comment moderation."
+    },
+    "loverequest": {
+      "descripcion": "Interactive web app for creating and customizing creative date requests. Features pricing plans, user profiles and modern design."
+    }
+  },
+  "experience": {
+    "etiqueta": "EDUCATION",
+    "titulo": "My",
+    "tituloAccento": "Education",
+    "uni": {
+      "titulo": "Information Technology Engineering",
+      "institucion": "UTN — Universidad Técnica Nacional, Puntarenas",
+      "periodo": "2ND YEAR · IN PROGRESS",
+      "estado": "In progress"
+    },
+    "fwd": {
+      "titulo": "FWD (Forward) Certification",
+      "institucion": "FWD Academy — Costa Rica",
+      "periodo": "6 MONTHS · COMPLETED",
+      "estado": "Completed"
+    },
+    "ccna": {
+      "titulo": "CCNA — Cisco Networking",
+      "institucion": "Cisco Networking Academy — University",
+      "periodo": "IN PROGRESS",
+      "estado": "In progress"
+    }
+  },
+  "contact": {
+    "etiqueta": "GET IN TOUCH",
+    "titulo": "Let's Create",
+    "tituloAccento": "Something Great",
+    "labelNombre": "Your Name",
+    "labelEmail": "Email Address",
+    "labelMensaje": "Message",
+    "placeholderNombre": "Marie Smith",
+    "placeholderEmail": "marie@example.com",
+    "placeholderMensaje": "Hi, I'd love to work with you...",
+    "btnEnviar": "Send Message",
+    "enviando": "Sending...",
+    "exito": "Message sent!",
+    "error": "Error, try again"
+  },
+  "footer": {
+    "nombre": "Luis Blandon",
+    "derechos": "All rights reserved.",
+    "volverArriba": "Back to Top"
+  }
+}

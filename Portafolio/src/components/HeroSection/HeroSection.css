@@ -1,0 +1,214 @@
+.heroContenedor {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContenido {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--espacio3XL);
+  align-items: center;
+  padding: var(--espacio3XL) 0;
+}
+
+/* Texto */
+.heroTexto {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacioXL);
+  overflow-wrap: break-word;
+  word-break: break-word;
+  min-width: 0;
+}
+
+.heroTitulo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacioSM);
+}
+
+.heroSaludo {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--textoPrincipal);
+}
+
+.heroNombre {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--textoPrincipal);
+}
+
+.heroRol {
+  display: flex;
+  gap: var(--espacioSM);
+  flex-wrap: wrap;
+}
+
+.heroRolParte1 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--textoPrincipal);
+}
+
+.heroRolParte2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  font-style: italic;
+  color: var(--acentoPrimario);
+}
+
+.heroDescripcion {
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Acciones */
+.heroAcciones {
+  display: flex;
+  gap: var(--espacioMD);
+  flex-wrap: wrap;
+}
+
+.btnIcono {
+  font-size: 0.875rem;
+}
+
+.btnPlayIcono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: var(--superficie);
+  border-radius: var(--radioCompleto);
+  font-size: 0.625rem;
+}
+
+/* Imagen */
+.heroImagenWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroImagenMarco {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: linear-gradient(135deg, var(--superficie) 0%, var(--fondoSecundario) 100%);
+  overflow: hidden;
+}
+
+.heroImagenFoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform var(--transicionLenta);
+}
+
+.heroImagenMarco:hover .heroImagenFoto {
+  transform: scale(1.05);
+}
+
+/* Decorativo */
+.heroDecorativo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  border: 1px solid var(--bordeSuave);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Línea Decorativa */
+.heroLineaDecorativa {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg, 
+    transparent 0%, 
+    var(--acentoPrimario) 20%, 
+    var(--acentoPrimario) 80%, 
+    transparent 100%
+  );
+  margin-top: var(--espacio2XL);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .heroContenido {
+    grid-template-columns: 1fr;
+    gap: var(--espacio2XL);
+    text-align: center;
+  }
+
+  .heroTexto {
+    align-items: center;
+  }
+
+  .heroDescripcion {
+    max-width: 100%;
+  }
+
+  .heroRol {
+    justify-content: center;
+  }
+
+  .heroImagenMarco {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContenido {
+    padding: var(--espacioXL) 0;
+  }
+
+  .heroSaludo {
+    font-size: 1.3rem;
+  }
+
+  .heroNombre {
+    font-size: 1.8rem;
+  }
+
+  .heroRolParte1,
+  .heroRolParte2 {
+    font-size: 1.3rem;
+  }
+
+  .heroDescripcion {
+    font-size: 0.9rem;
+  }
+
+  .heroImagenMarco {
+    max-width: 220px;
+  }
+
+  .heroAcciones {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .heroAcciones .btnPrimario,
+  .heroAcciones .btnSecundario {
+    width: 100%;
+    justify-content: center;
+  }
+}

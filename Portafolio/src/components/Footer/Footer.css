@@ -1,0 +1,110 @@
+.footerContenedor {
+  padding: var(--espacio3XL) var(--espacioLG);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espacio2XL);
+  border-top: 1px solid var(--borde);
+  background-color: var(--fondoPrincipal);
+}
+
+/* Redes Sociales */
+.footerRedesSociales {
+  display: flex;
+  gap: var(--espacioMD);
+}
+
+.footerRedEnlace {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  font-size: 1.25rem;
+  color: var(--textoSecundario);
+  transition: all var(--transicionNormal);
+}
+
+.footerRedEnlace:hover {
+  color: var(--acentoPrimario);
+  transform: translateY(-4px);
+}
+
+/* Branding */
+.footerBranding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espacioMD);
+}
+
+.footerLogoWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--espacioSM);
+}
+
+.footerLogoImg {
+  height: 32px;
+  width: 32px;
+  border-radius: var(--radioMD);
+  object-fit: cover;
+}
+
+.footerLogoTexto {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--textoPrincipal);
+}
+
+.footerCopyright {
+  font-size: 0.875rem;
+  color: var(--textoTerciario);
+  text-align: center;
+}
+
+/* Volver Arriba */
+.footerVolverArriba {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espacioSM);
+  cursor: pointer;
+  transition: all var(--transicionNormal);
+}
+
+.footerVolverArriba:hover {
+  transform: translateY(-4px);
+}
+
+.footerVolverArriba:hover .footerVolverIcono {
+  background-color: var(--acentoPrimario);
+  border-color: var(--acentoPrimario);
+}
+
+.footerVolverIcono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--borde);
+  border-radius: var(--radioCompleto);
+  font-size: 1rem;
+  color: var(--textoPrincipal);
+  transition: all var(--transicionNormal);
+}
+
+.footerVolverTexto {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--textoSecundario);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footerContenedor {
+    padding: var(--espacio2XL) var(--espacioMD);
+  }
+}

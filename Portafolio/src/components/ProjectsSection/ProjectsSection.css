@@ -1,0 +1,304 @@
+.projectsContenedor {
+  background-color: var(--fondoPrincipal);
+}
+
+.projectsContenido {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio2XL);
+}
+
+/* Encabezado */
+.projectsEncabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--espacioXL);
+  flex-wrap: wrap;
+}
+
+.projectsTituloWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacioSM);
+}
+
+.projectsTitulo {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* Filtros */
+.projectsFiltros {
+  display: flex;
+  gap: var(--espacioSM);
+}
+
+.projectsFiltro {
+  padding: var(--espacioSM) var(--espacioMD);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--textoSecundario);
+  border: 1px solid var(--borde);
+  border-radius: var(--radioMD);
+  cursor: pointer;
+  transition: all var(--transicionNormal);
+}
+
+.projectsFiltro:hover {
+  border-color: var(--acentoPrimario);
+  color: var(--textoPrincipal);
+}
+
+.projectsFiltro.filtroActivo {
+  background-color: var(--acentoPrimario);
+  border-color: var(--acentoPrimario);
+  color: var(--textoPrincipal);
+}
+
+/* Grid */
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--espacioXL);
+}
+
+/* Card */
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform var(--transicionNormal);
+}
+
+.projectCard:hover {
+  transform: translateY(-8px);
+}
+
+/* Imagen / Carrusel */
+.projectCardImagen {
+  width: 100%;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  position: relative;
+}
+
+.carruselWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carruselImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.carruselBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(13, 17, 23, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: var(--textoPrincipal);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity var(--transicionNormal), background var(--transicionNormal);
+  z-index: 3;
+}
+
+.projectCardImagen:hover .carruselBtn {
+  opacity: 1;
+}
+
+.carruselBtn:hover {
+  background: rgba(15, 98, 254, 0.8);
+}
+
+.carruselBtnIzq {
+  left: 8px;
+}
+
+.carruselBtnDer {
+  right: 8px;
+}
+
+.carruselDots {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 3;
+}
+
+.carruselDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: background var(--transicionNormal), transform var(--transicionNormal);
+}
+
+.carruselDot.carruselDotActivo {
+  background: var(--acentoPrimario);
+  transform: scale(1.3);
+}
+
+.projectCardImagenPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--superficie) 0%, var(--fondoSecundario) 100%);
+  color: var(--textoTerciario);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: var(--espacioSM);
+}
+
+/* Contenido */
+.projectCardContenido {
+  padding: var(--espacioLG);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacioSM);
+}
+
+/* Tags */
+.projectCardTags {
+  display: flex;
+  gap: var(--espacioSM);
+  flex-wrap: wrap;
+}
+
+.projectCardTag {
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: var(--espacioXS) var(--espacioSM);
+  background-color: var(--acentoSuave);
+  color: var(--acentoHover);
+  border-radius: var(--radioSM);
+}
+
+.tagOpaque {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--textoPrincipal);
+}
+
+.projectCardTitulo {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--textoPrincipal);
+}
+
+.projectCardDescripcion {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--textoSecundario);
+}
+
+.projectCardEnlace {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espacioXS);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--acentoPrimario);
+  margin-top: var(--espacioSM);
+  transition: gap var(--transicionNormal);
+}
+
+.projectCardEnlace:hover {
+  gap: var(--espacioSM);
+}
+
+.projectCardEnlaceIcono {
+  transition: transform var(--transicionNormal);
+}
+
+.projectCardEnlace:hover .projectCardEnlaceIcono {
+  transform: translateX(4px);
+}
+
+/* Sección Próximamente */
+.proximosWrapper {
+  margin-top: var(--espacio3XL);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacioXL);
+}
+
+.proximosTitulo {
+  font-size: 1.5rem;
+  color: var(--textoPrincipal);
+  display: flex;
+  align-items: center;
+  gap: var(--espacioSM);
+}
+
+/* Próximamente Card Wrapper */
+.proximoCardWrapper {
+  position: relative;
+}
+
+.proximoCardWrapper .proximoBadge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  background-color: var(--acentoPrimario);
+  color: white;
+  padding: 4px 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.proximoCardWrapper .projectCard {
+  opacity: 0.85;
+  border: 1px dashed var(--borde);
+  transition: all var(--transicionNormal);
+}
+
+.proximoCardWrapper .projectCard:hover {
+  opacity: 1;
+  border-color: var(--acentoPrimario);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .projectsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projectsEncabezado {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+}

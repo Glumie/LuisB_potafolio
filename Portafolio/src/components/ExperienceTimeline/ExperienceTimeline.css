@@ -1,0 +1,149 @@
+.formacionContenedor {
+  background-color: var(--fondoSecundario);
+}
+
+.formacionContenido {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio2XL);
+}
+
+.formacionTitulo {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* Grid de Cards */
+.formacionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--espacioXL);
+}
+
+/* Card */
+.formacionCard {
+  padding: var(--espacioXL);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacioMD);
+  transition: transform var(--transicionNormal);
+}
+
+.formacionCard:hover {
+  transform: translateY(-4px);
+}
+
+/* Header con icono + info */
+.formacionCardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--espacioMD);
+}
+
+.formacionIcono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  background-color: var(--acentoSuave);
+  border-radius: var(--radioMD);
+  color: var(--acentoPrimario);
+}
+
+.formacionInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacioXS);
+}
+
+.formacionCardTitulo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--textoPrincipal);
+  line-height: 1.3;
+}
+
+.formacionInstitucion {
+  font-size: 0.8rem;
+  color: var(--textoSecundario);
+}
+
+.formacionPeriodo {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--textoTerciario);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Barra de Progreso */
+.formacionProgresoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacioSM);
+}
+
+.formacionProgresoBar {
+  width: 100%;
+  height: 6px;
+  background-color: var(--superficie);
+  border-radius: var(--radioCompleto);
+  overflow: hidden;
+}
+
+.formacionProgresoFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--acentoPrimario), var(--acentoHover));
+  border-radius: var(--radioCompleto);
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.formacionProgresoFill.progresoCompleto {
+  background: linear-gradient(90deg, #2ea043, #56d364);
+}
+
+.formacionProgresoInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.formacionEstado {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 2px 8px;
+  border-radius: var(--radioSM);
+}
+
+.estadoEnProgreso {
+  background-color: var(--acentoSuave);
+  color: var(--acentoHover);
+}
+
+.estadoCompleto {
+  background-color: rgba(46, 160, 67, 0.15);
+  color: #56d364;
+}
+
+.formacionPorcentaje {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--textoSecundario);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .formacionGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .formacionGrid {
+    grid-template-columns: 1fr;
+  }
+}

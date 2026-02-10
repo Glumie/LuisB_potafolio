@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "inicio": "Inicio",
+    "sobreMi": "Sobre Mí",
+    "servicios": "Servicios",
+    "proyectos": "Proyectos",
+    "contacto": "Contacto"
+  },
+  "hero": {
+    "saludo": "HOLA, SOY",
+    "nombre": "Luis Blandon",
+    "rol": "DESARROLLADOR Full Stack",
+    "rolParte1": "FULL STACK",
+    "rolParte2": "DEVELOPER",
+    "descripcion": "Soy un apasionado desarrollador Full Stack con la misión de crear experiencias digitales intuitivas y funcionales. Transformando ideas complejas en soluciones web completas.",
+    "btnCV": "Descargar CV"
+  },
+  "about": {
+    "etiqueta": "SOBRE MÍ",
+    "titulo": "Progreso Académico",
+    "tituloAccento": "& Contacto",
+    "descripcionAcademica": "Actualmente cursando mi carrera de Ingeniería en Tecnologías de la Información con enfoque en tecnologías web modernas y desarrollo de software. Manteniendo un fuerte enfoque tanto en la excelencia académica como en el desarrollo práctico de proyectos.",
+    "email": "luisblocon15@gmail.com",
+    "ubicacion": "Puntarenas, Costa Rica",
+    "estudios": "Estudiante de Ingeniería en Tecnologías de la Información"
+  },
+  "skills": {
+    "etiqueta": "Tech Stack & Skills",
+    "titulo": "Tecnologías"
+  },
+  "projects": {
+    "etiqueta": "PORTAFOLIO",
+    "titulo": "Proyectos",
+    "tituloAccento": "Recientes",
+    "verDetalles": "Ver Detalles",
+    "proximamente": "Próximamente",
+    "sinImagen": "Imagen no disponible",
+    "psm": {
+      "descripcion": "Plataforma full-stack para gestión de eventos en Puntarenas. Frontend con React 19, Tailwind CSS, Radix UI y Framer Motion. Backend con Django REST Framework, autenticación JWT, MySQL, MongoDB y automatización con n8n."
+    },
+    "taller": {
+      "descripcion": "Sistema de gestión para taller mecánico con autenticación, generador de tickets con QR, historial de citas y servicios, panel de administración y moderación de comentarios."
+    },
+    "loverequest": {
+      "descripcion": "Aplicación web interactiva para crear y personalizar solicitudes de citas creativas. Con planes de precios, perfiles de usuario y diseño moderno."
+    }
+  },
+  "experience": {
+    "etiqueta": "FORMACIÓN",
+    "titulo": "Mi",
+    "tituloAccento": "Formación",
+    "uni": {
+      "titulo": "Ingeniería en Tecnologías de la Información",
+      "institucion": "UTN — Universidad Técnica Nacional, Puntarenas",
+      "periodo": "2do AÑO · EN CURSO",
+      "estado": "En progreso"
+    },
+    "fwd": {
+      "titulo": "Certificación FWD (Forward)",
+      "institucion": "FWD Academy — Costa Rica",
+      "periodo": "6 MESES · COMPLETADO",
+      "estado": "Completado"
+    },
+    "ccna": {
+      "titulo": "CCNA — Cisco Networking",
+      "institucion": "Cisco Networking Academy — Universidad",
+      "periodo": "EN CURSO",
+      "estado": "En progreso"
+    }
+  },
+  "contact": {
+    "etiqueta": "CONTACTO",
+    "titulo": "Creemos Algo",
+    "tituloAccento": "Grandioso",
+    "labelNombre": "Tu Nombre",
+    "labelEmail": "Correo Electrónico",
+    "labelMensaje": "Mensaje",
+    "placeholderNombre": "Maria Gonzalez",
+    "placeholderEmail": "maria@ejemplo.com",
+    "placeholderMensaje": "Hola, me gustaría trabajar contigo...",
+    "btnEnviar": "Enviar Mensaje",
+    "enviando": "Enviando...",
+    "exito": "¡Mensaje enviado!",
+    "error": "Error, intenta de nuevo"
+  },
+  "footer": {
+    "nombre": "Luis Blandon",
+    "derechos": "Todos los derechos reservados.",
+    "volverArriba": "Volver Arriba"
+  }
+}

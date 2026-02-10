@@ -1,0 +1,286 @@
+/* ============================================
+   PORTAFOLIO - ESTILOS GLOBALES
+   Paleta: Corporate Midnight (IBM + GitHub)
+   ============================================ */
+
+/* ---------- Google Font ---------- */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+/* ---------- Variables CSS ---------- */
+:root {
+  /* Colores de fondo */
+  --fondoPrincipal: #0d1117;
+  --fondoSecundario: #161b22;
+  --superficie: #21262d;
+
+  /* Colores de acento */
+  --acentoPrimario: #0f62fe;
+  --acentoHover: #58a6ff;
+  --acentoSuave: rgba(15, 98, 254, 0.1);
+
+  /* Colores de texto */
+  --textoPrincipal: #f0f6fc;
+  --textoSecundario: #8b949e;
+  --textoTerciario: #6e7681;
+
+  /* Bordes */
+  --borde: #30363d;
+  --bordeSuave: rgba(48, 54, 61, 0.5);
+
+  /* Liquid Glass */
+  --vidrioFondo: rgba(22, 27, 34, 0.7);
+  --vidrioBlur: 12px;
+  --vidrioBorde: rgba(240, 246, 252, 0.1);
+
+  /* Tipografía */
+  --fuentePrincipal:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Espaciado */
+  --espacioXS: 0.25rem;
+  --espacioSM: 0.5rem;
+  --espacioMD: 1rem;
+  --espacioLG: 1.5rem;
+  --espacioXL: 2rem;
+  --espacio2XL: 3rem;
+  --espacio3XL: 4rem;
+
+  /* Bordes redondeados */
+  --radioSM: 4px;
+  --radioMD: 8px;
+  --radioLG: 12px;
+  --radioXL: 16px;
+  --radioCompleto: 9999px;
+
+  /* Transiciones */
+  --transicionRapida: 150ms ease;
+  --transicionNormal: 250ms ease;
+  --transicionLenta: 350ms ease;
+
+  /* Sombras */
+  --sombraSuave: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --sombraMedia: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --sombraFuerte: 0 8px 24px rgba(0, 0, 0, 0.5);
+
+  /* Z-index */
+  --zHeader: 1000;
+  --zModal: 1100;
+  --zTooltip: 1200;
+}
+
+/* ---------- Reset CSS ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+  font-size: 16px;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  font-family: var(--fuentePrincipal);
+  background-color: var(--fondoPrincipal);
+  color: var(--textoPrincipal);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ---------- Tipografía Base ---------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--textoPrincipal);
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  color: var(--textoSecundario);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--acentoHover);
+  text-decoration: none;
+  transition: color var(--transicionRapida);
+}
+
+a:hover {
+  color: var(--acentoPrimario);
+}
+
+/* ---------- Utilidades Liquid Glass ---------- */
+.vidrioEfecto {
+  background: var(--vidrioFondo);
+  backdrop-filter: blur(var(--vidrioBlur));
+  -webkit-backdrop-filter: blur(var(--vidrioBlur));
+  border: 1px solid var(--vidrioBorde);
+  border-radius: var(--radioLG);
+}
+
+.vidrioCard {
+  background: var(--vidrioFondo);
+  backdrop-filter: blur(var(--vidrioBlur));
+  -webkit-backdrop-filter: blur(var(--vidrioBlur));
+  border: 1px solid var(--borde);
+  border-radius: var(--radioLG);
+  transition:
+    border-color var(--transicionNormal),
+    box-shadow var(--transicionNormal);
+}
+
+.vidrioCard:hover {
+  border-color: var(--acentoPrimario);
+  box-shadow: 0 0 20px rgba(15, 98, 254, 0.15);
+}
+
+/* ---------- Contenedor Principal ---------- */
+.contenedor {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--espacioLG);
+  overflow: hidden;
+}
+
+/* ---------- Botón Primario ---------- */
+.btnPrimario {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espacioSM);
+  padding: var(--espacioMD) var(--espacioXL);
+  background-color: var(--acentoPrimario);
+  color: var(--textoPrincipal);
+  font-family: var(--fuentePrincipal);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  border-radius: var(--radioMD);
+  cursor: pointer;
+  transition:
+    background-color var(--transicionNormal),
+    transform var(--transicionRapida);
+}
+
+.btnPrimario:hover {
+  background-color: var(--acentoHover);
+  transform: translateY(-2px);
+}
+
+/* ---------- Botón Secundario ---------- */
+.btnSecundario {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espacioSM);
+  padding: var(--espacioMD) var(--espacioXL);
+  background-color: transparent;
+  color: var(--textoPrincipal);
+  font-family: var(--fuentePrincipal);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid var(--borde);
+  border-radius: var(--radioMD);
+  cursor: pointer;
+  transition:
+    border-color var(--transicionNormal),
+    background-color var(--transicionNormal);
+}
+
+.btnSecundario:hover {
+  border-color: var(--acentoPrimario);
+  background-color: var(--acentoSuave);
+}
+
+/* ---------- Sección Base ---------- */
+.seccion {
+  padding: var(--espacio3XL) 0;
+}
+
+.seccionTitulo {
+  text-align: center;
+  margin-bottom: var(--espacio2XL);
+}
+
+.seccionEtiqueta {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--acentoPrimario);
+  margin-bottom: var(--espacioSM);
+}
+
+/* ---------- Scrollbar Personalizada ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--fondoSecundario);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--borde);
+  border-radius: var(--radioCompleto);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--textoTerciario);
+}
+
+/* ---------- Selección de Texto ---------- */
+::selection {
+  background-color: var(--acentoPrimario);
+  color: var(--textoPrincipal);
+}
+
+/* ---------- Media Queries Base ---------- */
+@media (max-width: 1024px) {
+  .contenedor {
+    padding: 0 var(--espacioMD);
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  .seccion {
+    padding: var(--espacio2XL) 0;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}

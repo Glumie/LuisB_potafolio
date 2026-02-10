@@ -1,0 +1,188 @@
+.aboutContenedor {
+  background-color: var(--fondoSecundario);
+}
+
+.aboutContenido {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--espacio3XL);
+  align-items: start;
+}
+
+/* Texto Accento (Reutilizable) */
+.textoAccento {
+  color: var(--acentoPrimario);
+}
+
+/* Info Personal */
+.aboutInfoPersonal {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacioXL);
+}
+
+.aboutTitulo {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* Card Principal */
+.aboutCardPrincipal {
+  display: flex;
+  gap: var(--espacioMD);
+  padding: var(--espacioXL);
+}
+
+.aboutCardIcono {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.aboutCardContenido {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacioSM);
+}
+
+.aboutCardTitulo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--textoPrincipal);
+}
+
+.aboutCardTexto {
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+/* Contacto */
+.aboutContacto {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacioMD);
+}
+
+.aboutContactoItem {
+  display: flex;
+  align-items: center;
+  gap: var(--espacioSM);
+}
+
+.aboutContactoIcono {
+  font-size: 1rem;
+  color: var(--acentoPrimario);
+}
+
+.aboutContactoTexto {
+  font-size: 0.875rem;
+  color: var(--textoSecundario);
+}
+
+/* Tech Stack por Categorías */
+.aboutTechStack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacioXL);
+}
+
+.aboutTechEtiqueta {
+  display: flex;
+  align-items: center;
+  gap: var(--espacioMD);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--textoSecundario);
+}
+
+.aboutTechLinea {
+  width: 40px;
+  height: 1px;
+  background-color: var(--borde);
+}
+
+/* Grid de categorías */
+.aboutCategoriasGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--espacioMD);
+}
+
+.aboutCategoriaCard {
+  padding: var(--espacioLG);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacioMD);
+}
+
+.aboutCategoriaTitulo {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--acentoPrimario);
+  padding-bottom: var(--espacioSM);
+  border-bottom: 1px solid var(--bordeSuave);
+}
+
+/* Items de tecnología */
+.aboutTechGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacioSM);
+}
+
+.aboutTechItem {
+  display: flex;
+  align-items: center;
+  gap: var(--espacioXS);
+  padding: var(--espacioXS) var(--espacioSM);
+  background-color: var(--superficie);
+  border-radius: var(--radioSM);
+  transition: all var(--transicionRapida);
+}
+
+.aboutTechItem:hover {
+  background-color: var(--acentoSuave);
+}
+
+.aboutTechIcono {
+  font-size: 0.875rem;
+}
+
+.aboutTechNombre {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--textoSecundario);
+}
+
+/* Próximamente */
+.aboutCategoriaProximamente {
+  border: 1px dashed var(--borde);
+  opacity: 0.7;
+}
+
+.aboutCategoriaProximamente .aboutCategoriaTitulo {
+  color: var(--textoTerciario);
+  font-style: italic;
+}
+
+.aboutCategoriaProximamente .aboutTechItem {
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .aboutContenido {
+    grid-template-columns: 1fr;
+    gap: var(--espacio2XL);
+  }
+
+  .aboutCategoriasGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutCategoriasGrid {
+    grid-template-columns: 1fr;
+  }
+}
