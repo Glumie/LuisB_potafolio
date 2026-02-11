@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
-import miFoto from '../../assets/img/Me/me.jpeg';
+import miFoto from '../../assets/img/Me/me.webp';
 import './HeroSection.css';
 
 function HeroSection() {

@@ -1,0 +1,18 @@
+{
+  "name": "Luis Blandon | Portfolio",
+  "short_name": "LuisMiDev",
+  "description": "Portafolio de Luis Blandon — Desarrollador Full Stack especializado en React, Django y tecnologías web modernas.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#0f62fe",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/src/assets/icon/149434405.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

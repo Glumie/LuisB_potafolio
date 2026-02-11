@@ -1,12 +1,12 @@
-import PSMB from '../assets/img/PSM/PSMB.png';
-import PSMW from '../assets/img/PSM/PSMW.png';
-import psmLogIn from '../assets/img/PSM/psmLogIn.png';
-import tallerCap1 from '../assets/img/TallerJLP/cap1.png';
-import tallerCap2 from '../assets/img/TallerJLP/cap2.png';
-import tallerCap3 from '../assets/img/TallerJLP/cap3admin.png';
-import lrHome from '../assets/img/LoveRequest/home.png';
-import lrPricing from '../assets/img/LoveRequest/pricing.png';
-import lrUser from '../assets/img/LoveRequest/user.png';
+import PSMB from '../assets/img/PSM/PSMB.webp';
+import PSMW from '../assets/img/PSM/PSMW.webp';
+import psmLogIn from '../assets/img/PSM/psmLogIn.webp';
+import tallerCap1 from '../assets/img/TallerJLP/cap1.webp';
+import tallerCap2 from '../assets/img/TallerJLP/cap2.webp';
+import tallerCap3 from '../assets/img/TallerJLP/cap3admin.webp';
+import lrHome from '../assets/img/LoveRequest/home.webp';
+import lrPricing from '../assets/img/LoveRequest/pricing.webp';
+import lrUser from '../assets/img/LoveRequest/user.webp';
 
 const proyectosData = [
   {

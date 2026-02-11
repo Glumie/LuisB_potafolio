@@ -82,6 +82,7 @@ function ProjectCard({ proyecto, t }) {
               src={proyecto.imagenes[imgIndex]}
               alt={`${proyecto.titulo} - ${imgIndex + 1}`}
               className="carruselImg"
+              loading="lazy"
             />
             {tieneMultiples && (
               <>
