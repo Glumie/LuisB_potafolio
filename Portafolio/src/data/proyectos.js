@@ -20,7 +20,7 @@ const proyectosData = [
   },
   {
     id: 2,
-    titulo: 'Taller JLP',
+    titulo: 'Taller JPL',
     descripcionKey: 'projects.taller.descripcion',
     tags: ['REACT 19', 'BOOTSTRAP', 'SWEETALERT2', 'JSPDF', 'JSON SERVER'],
     categoria: 'desarrollo',
