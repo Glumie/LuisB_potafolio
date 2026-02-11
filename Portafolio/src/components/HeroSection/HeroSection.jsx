@@ -11,7 +11,7 @@ function HeroSection() {
       <div className="heroContenido contenedor">
         {/* Texto principal */}
         <div className="heroTexto">
-          <h1 className="heroTitulo">
+          <h1 className="heroTitulo" aria-label={`${t('hero.saludo')} ${t('hero.nombre')} - ${t('hero.rol')}`}>
             <span className="heroSaludo">{t('hero.saludo')}</span>
             <span className="heroNombre">{t('hero.nombre')}</span>
             <span className="heroRol">
