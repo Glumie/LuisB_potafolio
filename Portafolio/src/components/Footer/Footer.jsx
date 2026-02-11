@@ -13,7 +13,7 @@ function Footer() {
   const anioActual = new Date().getFullYear();
 
   const redesSociales = [
-    /* { id: 'linkedin', icono: <LinkedInIcon />, url: 'https://linkedin.com', titulo: 'LinkedIn' }, */
+    { id: 'linkedin', icono: <LinkedInIcon />, url: 'https://www.linkedin.com/in/luis-blandon-732a4a216/', titulo: 'LinkedIn' },
     { id: 'github', icono: <GitHubIcon />, url: 'https://github.com/Glumie', titulo: 'GitHub' },
     /* { id: 'twitter', icono: <XIcon />, url: 'https://twitter.com', titulo: 'Twitter' } */
   ];
