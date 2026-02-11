@@ -1,12 +1,7 @@
-/* ============================================
-   PORTAFOLIO - ESTILOS GLOBALES
-   Paleta: Corporate Midnight (IBM + GitHub)
-   ============================================ */
-
-/* ---------- Google Font ---------- */
+/*  Google Font  */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
-/* ---------- Variables CSS ---------- */
+/*  Variables CSS  */
 :root {
   /* Colores de fondo */
   --fondoPrincipal: #0d1117;
@@ -68,7 +63,7 @@
   --zTooltip: 1200;
 }
 
-/* ---------- Reset CSS ---------- */
+/*  Reset CSS  */
 *,
 *::before,
 *::after {
@@ -95,7 +90,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ---------- Tipografía Base ---------- */
+/*  Tipografía Base  */
 h1,
 h2,
 h3,
@@ -136,7 +131,7 @@ a:hover {
   color: var(--acentoPrimario);
 }
 
-/* ---------- Utilidades Liquid Glass ---------- */
+/* Utilidades Liquid Glass  */
 .vidrioEfecto {
   background: var(--vidrioFondo);
   backdrop-filter: blur(var(--vidrioBlur));
@@ -161,7 +156,7 @@ a:hover {
   box-shadow: 0 0 20px rgba(15, 98, 254, 0.15);
 }
 
-/* ---------- Contenedor Principal ---------- */
+/*  Contenedor Principal  */
 .contenedor {
   width: 100%;
   max-width: 1200px;
@@ -170,7 +165,7 @@ a:hover {
   overflow: hidden;
 }
 
-/* ---------- Botón Primario ---------- */
+/*  Botón Primario  */
 .btnPrimario {
   display: inline-flex;
   align-items: center;
@@ -194,7 +189,7 @@ a:hover {
   transform: translateY(-2px);
 }
 
-/* ---------- Botón Secundario ---------- */
+/*  Botón Secundario  */
 .btnSecundario {
   display: inline-flex;
   align-items: center;
@@ -218,7 +213,7 @@ a:hover {
   background-color: var(--acentoSuave);
 }
 
-/* ---------- Sección Base ---------- */
+/*  Sección Base  */
 .seccion {
   padding: var(--espacio3XL) 0;
 }
@@ -238,7 +233,7 @@ a:hover {
   margin-bottom: var(--espacioSM);
 }
 
-/* ---------- Scrollbar Personalizada ---------- */
+/*  Scrollbar Personalizada  */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -256,13 +251,13 @@ a:hover {
   background: var(--textoTerciario);
 }
 
-/* ---------- Selección de Texto ---------- */
+/*  Selección de Texto  */
 ::selection {
   background-color: var(--acentoPrimario);
   color: var(--textoPrincipal);
 }
 
-/* ---------- Media Queries Base ---------- */
+/*  Media Queries Base  */
 @media (max-width: 1024px) {
   .contenedor {
     padding: 0 var(--espacioMD);

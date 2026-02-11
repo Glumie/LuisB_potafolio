@@ -1,0 +1,8 @@
+# Robots.txt — Luis Blandon Portfolio
+# Permite a todos los crawlers indexar el sitio completo
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://luismidev.com/sitemap.xml

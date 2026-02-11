@@ -6,8 +6,8 @@ function Routing() {
     <div>
       <Router>
         <Routes>
-          <Route path='/' element={<Navigate to='/inicio' />} />
-          <Route path='/inicio' element={<Inicio />} />
+          <Route path="/" element={<Inicio />} />
+          <Route path="/inicio" element={<Navigate to="/" replace />} />
         </Routes>
       </Router>
     </div>
