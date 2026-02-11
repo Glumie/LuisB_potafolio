@@ -85,7 +85,7 @@ function ContactForm() {
   };
 
   return (
-    <div id="contacto" className="contactoContenedor seccion">
+    <section id="contacto" className="contactoContenedor seccion">
       <div className="contactoContenido contenedor">
         {/* Encabezado */}
         <div className="contactoEncabezado seccionTitulo">
@@ -165,7 +165,7 @@ function ContactForm() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

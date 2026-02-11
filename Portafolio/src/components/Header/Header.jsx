@@ -42,7 +42,7 @@ function Header() {
   };
 
   return (
-    <div id="headerPrincipal" className={`headerContenedor vidrioEfecto ${menuAbierto ? 'menuAbierto' : ''}`}>
+    <header id="headerPrincipal" className={`headerContenedor vidrioEfecto ${menuAbierto ? 'menuAbierto' : ''}`}>
       <div className="headerContenido contenedor">
         {/* Logo */}
         <div className="headerLogo" onClick={() => manejarClickEnlace('#inicio')}>
@@ -50,7 +50,7 @@ function Header() {
         </div>
 
         {/* Navegación Desktop */}
-        <div className="headerNav">
+        <nav className="headerNav">
           {enlacesNav.map((enlace) => (
             <div 
               key={enlace.id} 
@@ -60,7 +60,7 @@ function Header() {
               {enlace.texto}
             </div>
           ))}
-        </div>
+        </nav>
 
         {/* Acciones (Selector idioma + botón contacto) */}
         <div className="headerAcciones">
@@ -94,7 +94,7 @@ function Header() {
         </div>
 
         {/* Menú móvil */}
-        <div className={`menuMovil ${menuAbierto ? 'menuMovilAbierto' : ''}`}>
+        <nav className={`menuMovil ${menuAbierto ? 'menuMovilAbierto' : ''}`}>
           {enlacesNav.map((enlace) => (
             <div 
               key={enlace.id} 
@@ -118,9 +118,9 @@ function Header() {
               EN
             </div>
           </div>
-        </div>
+        </nav>
       </div>
-    </div>
+    </header>
   );
 }
 

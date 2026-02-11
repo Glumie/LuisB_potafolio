@@ -6,7 +6,7 @@ function NotFound() {
   const { t } = useTranslation();
 
   return (
-    <div className="notFoundContenedor">
+    <main className="notFoundContenedor">
       <div className="notFoundContenido">
         {/* Número 404 con efecto glow */}
         <div className="notFoundNumero">
@@ -34,7 +34,7 @@ function NotFound() {
       <div className="notFoundParticula notFoundParticula1"></div>
       <div className="notFoundParticula notFoundParticula2"></div>
       <div className="notFoundParticula notFoundParticula3"></div>
-    </div>
+    </main>
   );
 }
 

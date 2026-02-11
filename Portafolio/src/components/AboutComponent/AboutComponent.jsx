@@ -75,7 +75,7 @@ function AboutComponent() {
   ];
 
   return (
-    <div id="sobreMi" className="aboutContenedor seccion">
+    <section id="sobreMi" className="aboutContenedor seccion">
       <div className="aboutContenido contenedor">
         {/* Seccion izquierda:  Info personal */}
         <div className="aboutInfoPersonal">
@@ -133,7 +133,7 @@ function AboutComponent() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

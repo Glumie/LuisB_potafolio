@@ -7,7 +7,7 @@ function HeroSection() {
   const { t } = useTranslation();
 
   return (
-    <div id="inicio" className="heroContenedor">
+    <section id="inicio" className="heroContenedor">
       <div className="heroContenido contenedor">
         {/* Texto principal */}
         <div className="heroTexto">
@@ -43,7 +43,7 @@ function HeroSection() {
 
       {/* Línea decorativa inferior */}
       <div className="heroLineaDecorativa"></div>
-    </div>
+    </section>
   );
 }
 

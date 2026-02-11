@@ -16,7 +16,7 @@ function ProjectsSection() {
   const proyectosProximos = proyectosData.filter(p => p.estado === 'proximo');
 
   return (
-    <div id="proyectos" className="projectsContenedor seccion">
+    <section id="proyectos" className="projectsContenedor seccion">
       <div className="projectsContenido contenedor">
         {/* Encabezado */}
         <div className="projectsEncabezado">
@@ -52,7 +52,7 @@ function ProjectsSection() {
           </div>
         )}
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -73,7 +73,7 @@ function ProjectCard({ proyecto, t }) {
   };
 
   return (
-    <div className="projectCard vidrioCard">
+    <article className="projectCard vidrioCard">
       {/* Carrusel de imágenes */}
       <div className="projectCardImagen">
         {tieneImagenes ? (
@@ -127,7 +127,7 @@ function ProjectCard({ proyecto, t }) {
           {t('projects.verDetalles')} <ArrowForwardIcon fontSize="small" />
         </a>
       </div>
-    </div>
+    </article>
   );
 }
 

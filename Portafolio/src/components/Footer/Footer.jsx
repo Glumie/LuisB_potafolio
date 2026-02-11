@@ -27,7 +27,7 @@ function Footer() {
   };
 
   return (
-    <div id="footerPrincipal" className="footerContenedor">
+    <footer id="footerPrincipal" className="footerContenedor">
       {/* Sección de redes sociales */}
       <div className="footerRedesSociales">
         {redesSociales.map((red) => (
@@ -58,7 +58,7 @@ function Footer() {
         <div className="footerVolverIcono"><KeyboardArrowUpIcon /></div>
         <span className="footerVolverTexto">{t('footer.volverArriba')}</span>
       </div>
-    </div>
+    </footer>
   );
 }
 

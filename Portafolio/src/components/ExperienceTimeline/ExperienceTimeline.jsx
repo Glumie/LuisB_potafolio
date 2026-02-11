@@ -38,7 +38,7 @@ function ExperienceTimeline() {
   ];
 
   return (
-    <div id="experiencia" className="formacionContenedor seccion">
+    <section id="experiencia" className="formacionContenedor seccion">
       <div className="formacionContenido contenedor">
         {/* Encabezado */}
         <div className="formacionEncabezado seccionTitulo">
@@ -81,7 +81,7 @@ function ExperienceTimeline() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
