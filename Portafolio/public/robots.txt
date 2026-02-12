@@ -3,6 +3,9 @@
 
 User-agent: *
 Allow: /
+Disallow: /.env
+Disallow: /.git
+Disallow: /admin
 
 # Sitemap
 Sitemap: https://luismidev.com/sitemap.xml

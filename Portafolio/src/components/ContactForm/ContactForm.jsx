@@ -7,12 +7,8 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 import './ContactForm.css';
 
-const EMAILJS_SERVICE_ID = 'service_ehly0es';
-const EMAILJS_TEMPLATE_ID = 'template_jpaijel';
-const EMAILJS_PUBLIC_KEY = 'uvs9dnqSLR1JR6vjG';
-
 // Inicializar EmailJS
-emailjs.init(EMAILJS_PUBLIC_KEY);
+emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 
 function ContactForm() {
   const { t } = useTranslation();
@@ -21,7 +17,8 @@ function ContactForm() {
   const [formulario, setFormulario] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
+    trampa: '' // Honeypot field
   });
 
   const [estado, setEstado] = useState('idle'); // idle | sending | success | error
@@ -34,14 +31,22 @@ function ContactForm() {
   };
 
   const manejarEnvio = async () => {
+    // Validación de honeypot 
+    if (formulario.trampa) {
+      console.log('Bot detectado, anulando envío.');
+      setEstado('success'); // Simular éxito para un bot
+      setTimeout(() => setEstado('idle'), 4000);
+      return;
+    }
+
     if (!formulario.name || !formulario.email || !formulario.message) return;
     
     setEstado('sending');
 
     try {
       const resultado = await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           title: `Mensaje de ${formulario.name}`,
           name: formulario.name,
@@ -145,6 +150,17 @@ function ContactForm() {
               sx={inputSx}
             />
           </div>
+
+          {/* Honeypot (Campo no visible) */}
+          <input
+            type="text"
+            name="trampa"
+            value={formulario.trampa}
+            onChange={manejarCambio('trampa')}
+            style={{ display: 'none' }}
+            tabIndex="-1"
+            autoComplete="off"
+          />
 
           {/* Botón enviar */}
           <div className="contactoBtnWrapper" onClick={estado === 'idle' ? manejarEnvio : undefined}>
