@@ -123,9 +123,21 @@ function ProjectCard({ proyecto, t }) {
         <h3 className="projectCardTitulo">{proyecto.titulo}</h3>
         <p className="projectCardDescripcion">{t(proyecto.descripcionKey)}</p>
 
-        <a href="#" className="projectCardEnlace">
-          {t('projects.verDetalles')} <ArrowForwardIcon fontSize="small" />
-        </a>
+        {proyecto.url && proyecto.estado !== 'proximo' ? (
+          <a
+            href={proyecto.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="projectCardEnlace"
+          >
+            {t('projects.verDetalles')} <ArrowForwardIcon fontSize="small" />
+          </a>
+        ) : (
+          <span className="projectCardEnlace projectCardEnlaceDisabled">
+            {t('projects.verDetalles')} <ArrowForwardIcon fontSize="small" />
+          </span>
+        )}
+
       </div>
     </article>
   );

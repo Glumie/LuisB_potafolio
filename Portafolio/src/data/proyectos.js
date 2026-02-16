@@ -16,6 +16,7 @@ const proyectosData = [
     tags: ['REACT 19', 'TAILWIND', 'DJANGO', 'MYSQL', 'MONGODB', 'JWT', 'N8N'],
     categoria: 'desarrollo',
     estado: 'publicado',
+    url: 'https://psm.luismidev.com/home',
     imagenes: [PSMB, PSMW, psmLogIn]
   },
   {
@@ -25,6 +26,7 @@ const proyectosData = [
     tags: ['REACT 19', 'BOOTSTRAP', 'SWEETALERT2', 'JSPDF', 'JSON SERVER'],
     categoria: 'desarrollo',
     estado: 'publicado',
+    url: 'https://taller.luismidev.com/home',
     imagenes: [tallerCap1, tallerCap2, tallerCap3]
   },
   {
